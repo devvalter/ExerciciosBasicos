@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+</head>
+
+<body>
+    <script>
+        // Elaborar um programa para uma loja, o qual leia o preço de um
+        // produto e informe as opções de pagamento da loja. Calcule e
+        // informe o valor para pagamento à vista com 15% de desconto e o
+        // valor em 5 vezes.
+
+        var valorCompra;
+        valorCompra = Number(prompt("Valor da compra"));
+
+        var valorCompra1;
+        valorCompra1 = valorCompra * 15
+        var valorCompra2;
+        valorCompra2 = valorCompra1 / 100
+        var valorCompra3;
+        valorCompra3 = valorCompra - valorCompra2
+
+        alert("seu desconto á vista é " + valorCompra3);
+
+        var parcelado;
+        parcelado = valorCompra / 5
+        alert("seu valor parcelado é 5x de " + parcelado);
+    </script>
+</body>
+
+</html>
