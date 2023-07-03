@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+</head>
+
+<body>
+    <!-- Elaborar um algoritmo que calcule o Delta de uma equação do segundo grau.  -->
+
+    <h1>Delta da Equação de 2&ordm; grau</h1>
+    <h2>&Delta; = b&sup2; - 4 . a . c</h2>
+    <p>Valor de a: <input type=“text” id="inValorA"> </p>
+    <p>Valor de b: <input type=“text” id="inValorB"> </p>
+    <p>Valor de c: <input type=“text” id="inValorC"> </p>
+    <p><input type="button" value="Calcular o &Delta;" id="btCalcular">
+    <p id=outResposta> </p>
+
+    <script>
+        var inValorA = document.getElementById("inValorA");
+        var inValorB = document.getElementById("inValorB");
+        var inValorC = document.getElementById("inValorC");
+        var btCalcular = document.getElementById("btCalcular");
+        var outResposta = document.getElementById("outResposta");
+
+        btCalcular.addEventListener("click", mostrarFinal)
+
+        function mostrarFinal() {
+
+            var valorA = inValorA.value;
+            var valorB = inValorB.value;
+            var valorC = inValorC.value
+            var conta = valorB * valorB - 4 * valorA * valorC
+
+            outResposta.textContent = "Delta = " + conta;
+
+        }
+
+    </script>
+</body>
+
+</html>

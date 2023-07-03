@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+</head>
+
+<body>
+     <!-- Elaborar um algoritmo para um restaurante que leia o preço por quilo e o peso do prato
+     feito pelo cliente em gramas (gr).
+     OBS.: 1) O nome do restaurante deve ter as iniciais do seu nome -->
+
+    <h1>Restaurante VSSJ</h1>
+    <p>Buffet por Quilo: <input type=“text” id="inNumero"> </p>
+    <p>Consumo do Cliente (gr): <input type=“text” id="inGramas"> </p>
+    <p><input type="button" value="Calcular" id="btCalcular">
+    <p id=outResposta> </p>
+
+    <script>
+
+        var inNumero = document.getElementById("inNumero");
+        var inGramas = document.getElementById("inGramas");
+        var btCalcular = document.getElementById("btCalcular");
+        var outResposta = document.getElementById("outResposta");
+
+        btCalcular.addEventListener("click", mostrarFinal)
+
+        function mostrarFinal() {
+            var numero = inNumero.value;
+            var gramas = inGramas.value;
+            var valor1 = numero * gramas;
+            var valor2 = valor1 / 1000
+
+            outResposta.textContent = "Valor a pagar é R$ " + valor2.toFixed(2);
+
+        }
+    </script>
+</body>
+
+</html>
