@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+</head>
+
+<body>
+
+    <!-- Numa corrida de rua (5 km) os tempos dos participantes são cronometrados apenas em
+    segundos, faça um programa para receber esse tempo em segundos e converter para
+    minutos e segundos -->
+
+    <h1>Corrida de rua</h1>
+    <p> Tempo em segundos: <input type = “text” id = "inSegundos" > 
+    <input type = "button" value = "Converter" id = "btCalcular" > </p>
+         <p id = outResposta> </p>
+
+    <script>
+        var inSegundos = document.getElementById("inSegundos");
+        var btCalcular = document.getElementById("btCalcular");
+        var outResposta = document.getElementById("outResposta");
+
+        btCalcular.addEventListener("click", mostrarFinal)
+
+        function mostrarFinal() {
+            var segundos = inSegundos.value;
+            var valor1 = segundos / 60;
+            var a = Math.floor(valor1)
+            var b = segundos % 60
+
+            outResposta.textContent = "Seu tempo foi de " + a + " minuto(s) e " + b + " segundo(s).";
+        }
+
+    </script>
+</body>
+
+</html>
